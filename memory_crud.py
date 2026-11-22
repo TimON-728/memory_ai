@@ -5,14 +5,11 @@ def get_from_memory(query):
     try:
         with open('memory.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
+
+            result = list(query.split())
             
-            result = data.get(query)
-            
-            if result is not None:
-                return result
-            else:
-                print('Не знаю, сейчас подумаю')
-                return parser(query)
+            print('Думаю...')
+            parser(result)
                 
     except FileNotFoundError:
         return "Ошибка: Файл memory.json не найден!"
