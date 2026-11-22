@@ -13,7 +13,7 @@ def add_to_memory(key, value, filename='memory.json'):
         json.dump(data, file, indent=4, ensure_ascii=False)
 
 
-'''class MyNumber:
+class MyNumber:
     def __init__(self, value):
         self.value = value
 
@@ -112,7 +112,7 @@ def add_to_memory(key, value, filename='memory.json'):
         return str(self.value)
 
 
-def parser(row_data):
+def old_parser(row_data):
     query = row_data.split()
 
     a = MyNumber(int(query[0]))
@@ -124,6 +124,6 @@ def parser(row_data):
     elif query[1] == '*':
         return(a * b)
     elif query[1] == '/':
-        return(a / b)'''
+        return(a / b)
 
 
